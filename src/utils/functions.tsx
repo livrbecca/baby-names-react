@@ -1,15 +1,7 @@
-import React from 'react'
+import React from "react";
 
-interface Props {
-    
-}
+const functions = () => {
+  return <div></div>;
+};
 
-const functions = (props: Props) => {
-    return (
-        <div>
-            
-        </div>
-    )
-}
-
-export default functions
+export default functions;

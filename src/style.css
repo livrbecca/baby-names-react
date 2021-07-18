@@ -13,9 +13,11 @@
   flex-wrap: wrap;
   justify-content: center;
   width: 1000px;
-  height: 650px;
+  height: 450px;
   font-size: 17px;
-  padding: 3%;
+  padding-top: 8%;
+  padding-right: 3%;
+  padding-left: 3%;
 }
 
 .card {
