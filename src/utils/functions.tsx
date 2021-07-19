@@ -7,6 +7,9 @@ export const renderMapHTML = (
   setFavourites: React.Dispatch<React.SetStateAction<BabyDataProps[]>>,
   favourites: BabyDataProps[]
 ): JSX.Element[] => {
+
+
+
   return searchBar(babyData, searchTerm)
     .sort((a, b) => a.name.localeCompare(b.name))
     .map((value) => {
