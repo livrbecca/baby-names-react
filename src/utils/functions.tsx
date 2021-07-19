@@ -3,14 +3,29 @@ import Baby from "../components/Baby";
 
 export const renderMapHTML = (
   babyData: BabyDataProps[],
-  searchTerm: string
+  searchTerm: string,
+  setFavourites: React.Dispatch<React.SetStateAction<BabyDataProps[]>>,
+  favourites: BabyDataProps[]
 ): JSX.Element[] => {
   return searchBar(babyData, searchTerm)
     .sort((a, b) => a.name.localeCompare(b.name))
     .map((value) => {
-      return <Baby name={value.name} id={value.id} sex={value.sex} />;
+      // pass addFaveName function into <Baby />,
+      //will also need to add to an interface so <Baby /> can recieve it>
+      return (
+        <Baby
+          name={value.name}
+          id={value.id}
+          sex={value.sex}
+          favourites={favourites}
+          setFavourites={setFavourites}
+        />
+      );
     });
 };
+
+// step 1: add the AddFaveName function here
+// idea? make it in baby, add whats needed to interface
 
 export const searchBar = (
   babyData: BabyDataProps[],

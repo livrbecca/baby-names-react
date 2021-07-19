@@ -1,12 +1,23 @@
-import { BabyDataProps } from "../utils/interfaces";
+import { FavListProps, BabyDataProps } from "../utils/interfaces";
 
-const Baby: React.FC<BabyDataProps> = ({ name, id, sex }) => {
+const Baby: React.FC<FavListProps> = ({ name, id, sex, favourites, setFavourites }) => {
+  //const [favourites, setFavourites] = useState<BabyDataProps[]>([]);
+
+  const addFaveName = (addedName: BabyDataProps) => {
+    const newFavList = [...favourites, addedName];
+    setFavourites(newFavList);
+    console.log("added", addedName);
+    console.log(favourites);
+  };
+
   return (
-    
-      <div className={sex === "f" ? "card girl" : "card boy"} key={id}>
-        {name}
-      </div>
-   
+    <div
+      onClick={() => addFaveName({ name, id, sex })}
+      className={sex === "f" ? "card girl" : "card boy"}
+      key={id}
+    >
+      {name}
+    </div>
   );
 };
 
