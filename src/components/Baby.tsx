@@ -10,8 +10,6 @@ const Baby: React.FC<AddFaveNameFunctionProps> = ({
   const addFaveName = (addedName: BabyDataProps) => {
     const newFavList = [...favourites, addedName];
     setFavourites(newFavList);
-    console.log("added", addedName);
-    console.log(favourites);
   };
 
   return (
