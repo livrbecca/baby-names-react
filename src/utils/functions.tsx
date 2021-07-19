@@ -10,8 +10,6 @@ export const renderMapHTML = (
   return searchBar(babyData, searchTerm)
     .sort((a, b) => a.name.localeCompare(b.name))
     .map((value) => {
-      // pass addFaveName function into <Baby />,
-      //will also need to add to an interface so <Baby /> can recieve it>
       return (
         <Baby
           name={value.name}
@@ -24,10 +22,7 @@ export const renderMapHTML = (
     });
 };
 
-// step 1: add the AddFaveName function here
-// idea? make it in baby, add whats needed to interface
-
-export const searchBar = (
+const searchBar = (
   babyData: BabyDataProps[],
   searchTerm: string
 ): BabyDataProps[] => {

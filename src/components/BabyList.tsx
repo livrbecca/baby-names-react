@@ -10,9 +10,8 @@ const BabyList: React.FC = () => {
   const [searchTerm, setSearchTerm] = useState<string>("");
   const [favourites, setFavourites] = useState<BabyDataProps[]>([]);
 
-  // code for removing name
-  //  add to utils/ function file
-  
+
+
   const removeFaveName = (addedName: BabyDataProps) => {
     const newFavList = favourites.filter((fave) => fave.id !== addedName.id);
     setFavourites(newFavList);
