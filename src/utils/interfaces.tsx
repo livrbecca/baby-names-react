@@ -9,11 +9,11 @@ export interface SearchBarProps {
   searchTerm: string;
 }
 
-export interface FavComponent {
+export interface FavouritesArrayAndComponent {
   favourites: BabyDataProps[];
 }
 
-export interface FavListProps {
+export interface AddFaveNameFunctionProps {
   favourites: BabyDataProps[];
   id: number;
   name: string;
@@ -21,18 +21,4 @@ export interface FavListProps {
   setFavourites: React.Dispatch<React.SetStateAction<BabyDataProps[]>>;
 }
 
-// export interface singleBabyPropsWithFave {
-//   id: number;
-//   name: string;
-//   sex: string;
-//   favourites: any[];
-//   setFavourites(id: number): void;
-//   addedName: BabyDataProps[];
-//   addFaveName:
-// }
 
-// export interface FaveFunction {
-//   favourites: any[];
-//   setFavourites(id: number ): void;
-//   addedName: BabyDataProps[];
-// }

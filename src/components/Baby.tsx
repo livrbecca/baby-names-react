@@ -1,6 +1,12 @@
-import { FavListProps, BabyDataProps } from "../utils/interfaces";
+import { AddFaveNameFunctionProps, BabyDataProps } from "../utils/interfaces";
 
-const Baby: React.FC<FavListProps> = ({ name, id, sex, favourites, setFavourites }) => {
+const Baby: React.FC<AddFaveNameFunctionProps> = ({
+  name,
+  id,
+  sex,
+  favourites,
+  setFavourites,
+}) => {
   //const [favourites, setFavourites] = useState<BabyDataProps[]>([]);
 
   const addFaveName = (addedName: BabyDataProps) => {
