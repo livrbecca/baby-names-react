@@ -7,11 +7,11 @@ export const renderMapHTML = (
   setFavourites: React.Dispatch<React.SetStateAction<BabyDataProps[]>>,
   favourites: BabyDataProps[]
 ): JSX.Element[] => {
-
-
-
+  const faveIds = favourites.map((value) => value.id);
+  console.log(faveIds);
   return searchBar(babyData, searchTerm)
     .sort((a, b) => a.name.localeCompare(b.name))
+    .filter((onScreenName) => !faveIds.includes(onScreenName.id))
     .map((value) => {
       return (
         <Baby

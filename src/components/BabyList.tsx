@@ -12,10 +12,9 @@ const BabyList: React.FC = () => {
 
 
 
-  const removeFaveName = (addedName: BabyDataProps) => {
-    const newFavList = favourites.filter((fave) => fave.id !== addedName.id);
-    setFavourites(newFavList);
-  };
+  // const removeFaveName = (addedName: BabyDataProps) => {
+  //   const newFavList = favourites.filter((fave) => fave.id !== addedName.id);
+  // };
 
   return (
     <>
