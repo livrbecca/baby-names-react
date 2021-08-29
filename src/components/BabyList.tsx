@@ -6,7 +6,7 @@ import { renderMapHTML } from "../utils/functions";
 import FavList from "./FavList";
 
 const BabyList: React.FC = () => {
-  const [babyData, setBabyData] = useState<BabyDataProps[]>(data);
+  const babyData: BabyDataProps[] = data
   const [searchTerm, setSearchTerm] = useState<string>("");
   const [favourites, setFavourites] = useState<BabyDataProps[]>([]);
 
