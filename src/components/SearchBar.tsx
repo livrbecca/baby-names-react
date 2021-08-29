@@ -3,7 +3,7 @@ import { SearchBarProps } from "../utils/interfaces";
 
 const SearchBar = ({ searchTerm, setSearchTerm }: SearchBarProps) => {
   return (
-    <div>
+    <div className="search">
       <input
         type="text"
         value={searchTerm}

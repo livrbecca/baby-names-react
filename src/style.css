@@ -1,12 +1,27 @@
 .fav-container {
   display: flex;
   flex-direction: row;
+  flex-wrap: wrap;
   border: solid rgba(0, 0, 0, 0.109) 5px;
   width: 990px;
-  height: 50px;
+  height: fit-content;
   position: relative;
-  bottom: 30px;
+  bottom: 80px;
   color: grey;
+}
+
+input {
+  width: 300px;
+  height: 30px;
+}
+
+.search {
+  text-align: center;
+  width: fit-content;
+  margin: auto;
+  border: solid 1px rgba(128, 0, 128, 0.63);
+  margin-top: 25px;
+  font-size: 17px;
 }
 .container {
   position: fixed;
@@ -28,6 +43,7 @@
   padding-top: 9%;
   padding-right: 3%;
   padding-left: 3%;
+  padding-bottom: 13px;
 }
 
 .card {
